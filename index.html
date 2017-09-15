@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <title>Belle vue</title>
+    <!-- link rel="icon" href="favicon.ico" /-->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- link rel="stylesheet" href="views/app.css" -->
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+  </head>
+  <body>
+    <div id="application">
+      <h1>Belle vue</h1>
+      <router-link to="/list">List</router-link>
+      <router-link to="/about">About</router-link>
+      
+      <router-view></router-view>
+    </div>      
+    
+    <script src="app.js"></script>
+      
+  </body>
+</html>
+
+
