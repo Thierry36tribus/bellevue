@@ -19,10 +19,20 @@ Vue.component('list', {
 })
 
 const listView = Vue.extend({ 
-  template: '<list :items="persons"></list>',
+  template: `
+    <div>
+      <input type="search" v-model="search">
+      <list :items="filteredPersons"></list>
+    </div>`,
   data: function() {
     return {
-      persons: PERSONS
+      persons: PERSONS,
+      search: ''
+    }
+  },
+  computed: {
+    filteredPersons() {
+      return this.persons.filter(person => person.name.toLowerCase().indexOf(this.search.toLowerCase()) >= 0)
     }
   }
 }) 
